@@ -1,3 +1,30 @@
+/* Services */
+#services {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Footer */
+#footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
 /* ==========================================================
    Software Development Company, style.css
    ========================================================== */
