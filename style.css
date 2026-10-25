@@ -1,0 +1,285 @@
+/* Services */
+#services {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service {
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Footer */
+#footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+/* ==========================================================
+   Software Development Company, style.css
+   ========================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+    --ink: #0d1b2e;
+    --ink-soft: #3b4a60;
+    --paper: #f4f7fb;
+    --white: #ffffff;
+    --line: #d5dde8;
+    --signal: #2b59e6;
+    --signal-dark: #1d43b8;
+    --mint: #5fe0b7;
+
+    --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+
+    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+    --step-1: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+    --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+    --step-3: clamp(2.2rem, 1.6rem + 3vw, 4rem);
+
+    --radius: 6px;
+    --container: 68rem;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: var(--signal);
+}
+
+:focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    padding: 1.25rem 1.5rem;
+}
+
+header h1 {
+    max-width: var(--container);
+    margin-inline: auto;
+    font-size: var(--step-1);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+/* ---------- Hero (works for <hero> and .hero) ---------- */
+hero,
+.hero {
+    display: block;
+    position: relative;
+    isolation: isolate;
+    padding: clamp(4rem, 12vw, 9rem) 1.5rem;
+    color: var(--white);
+    background-color: var(--ink);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    overflow: hidden;
+}
+
+hero::after,
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: auto -10% -60% auto;
+    width: 38rem;
+    height: 38rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(43, 89, 230, 0.55), transparent 65%);
+    z-index: -1;
+}
+
+hero h2,
+.hero h2 {
+    max-width: var(--container);
+    margin-inline: auto;
+    font-size: var(--step-3);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    animation: rise 0.7s ease-out both;
+}
+
+hero p,
+.hero p {
+    max-width: var(--container);
+    margin: 1.5rem auto 0;
+    font-size: var(--step-1);
+    line-height: 1.45;
+    color: #c6d3e6;
+    animation: rise 0.7s 0.12s ease-out both;
+}
+
+/* Keep hero text on a readable measure inside the wide container */
+hero h2,
+hero p,
+.hero h2,
+.hero p {
+    padding-right: min(8vw, 12rem);
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- Services ---------- */
+#service {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+}
+
+#service h2 {
+    font-size: var(--step-2);
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+}
+
+#service ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+#service li {
+    position: relative;
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+    font-weight: 600;
+    background: var(--white);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#service li::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--signal);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.25s ease;
+}
+
+#service li:hover {
+    background: #eef3ff;
+}
+
+#service li:hover::before {
+    transform: scaleY(1);
+}
+
+/* ---------- Footer ---------- */
+footer,
+#footer {
+    margin-top: auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a9b8cf;
+    background: var(--ink);
+    border-top: 3px solid var(--signal);
+}
+
+footer p {
+    max-width: var(--container);
+    margin-inline: auto;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 40rem) {
+
+    hero h2,
+    hero p,
+    .hero h2,
+    .hero p {
+        padding-right: 0;
+    }
+
+    #service li {
+        padding: 1.15rem 1.25rem 1.15rem 1.5rem;
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
