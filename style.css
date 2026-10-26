@@ -25,6 +25,7 @@
     background-color: #222;
     color: #fff;
 }
+
 /* ==========================================================
    Software Development Company, style.css
    ========================================================== */
@@ -282,4 +283,24 @@ footer p {
         transition: none !important;
         scroll-behavior: auto !important;
     }
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #2b59e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
 }
